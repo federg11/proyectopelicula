@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+const cors = require ('cors');
 
 mongoose.connect("mongodb://localhost:27017/proyecto", {useNewUrlParser: true, useUnifiedTopology: true});
 
@@ -16,12 +17,14 @@ var indexRouter = require('./routes/index');
 var app = express();
 
 // view engine setup
-
+app.use(cors());
+app.options('*',cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/imagenes', express.static("imagenes")); // esto sirve para que en el backend yo pueda poner /imagenes/nombrearchivo.jpg
+// y sepa que tiene que ir a la carpeta imagenes y buscar el .jpg del parametro
 
 app.use('/', indexRouter);
 
