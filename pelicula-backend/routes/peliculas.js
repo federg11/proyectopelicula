@@ -15,12 +15,20 @@ const storage = multer.diskStorage({
   });
   const upload = multer({ storage: storage })
 
+  const ComentarioSchema = new Schema( {
+        _id: ObjectId,
+        autor: String,
+        comentario: String
+  },{timestamps:true})
+  
 const PeliculaSchema = new Schema(
     {
     _id: ObjectId,
     titulo: {type: String, trim: true},
+    anio: Number,
+    duracion: String,
     descripcion: String,
-    comentarios: String,
+    comentarios: [ComentarioSchema],
     imagen: String
   },
   {timestamps:true}
@@ -52,10 +60,11 @@ const PeliculaSchema = new Schema(
         const urlImagen = 'http://localhost:3000/imagenes/' + req.file.filename;
         const peliculaNueva = new PeliculaModel({
             _id: new ObjectId(),
+            anio: req.body.anio,
             titulo: req.body.titulo,
             descripcion: req.body.descripcion,
-            comentarios: req.body.comentarios,
-            imagen: urlImagen //eso lo genero multer al crear la imagen en la carpta
+            comentarios: [''],
+            imagen: urlImagen //eso lo genero multer 
         });
         try {
             const respuesta = await peliculaNueva.save();
