@@ -1,11 +1,8 @@
 //@ts-check
 import React from "react";
-import { BrowserRouter as Router,Switch,Route,Link } from "react-router-dom";
-import Administrar from "./pages/Administrar";
-import Home from "./pages/Home";
-import {Button} from 'antd';
-
-
+import { BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import Peliculas from './components/Peliculas';
+import Administrar from './components/Administrar';
 
 
 export default function App() {
@@ -16,13 +13,13 @@ export default function App() {
         </div>
   
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
+        <nav className="text-white bg-black flex justify-center items-center">
+          <ul className="flex p-4">
+            <li className="ml-2 text-xl">
+              <Link to="/">Peliculas</Link>
             </li>
-            <li>
-              <Link to="/admin">Administrar Peliculas</Link>
+            <li className="ml-2 text-xl">
+              <Link to="/admin">Administar Peliculas</Link>
             </li>
           </ul>
         </nav>
@@ -32,10 +29,10 @@ export default function App() {
             <Administrar />
           </Route>
           <Route path="/">
-            <Home />
+            <Peliculas />
           </Route>
         </Switch>
       </div>
     </Router>
-    );
+  );
 }
