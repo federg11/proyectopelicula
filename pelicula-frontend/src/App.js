@@ -3,12 +3,18 @@ import React from "react";
 import { BrowserRouter as Router,Switch,Route,Link } from "react-router-dom";
 import Administrar from "./pages/Administrar";
 import Home from "./pages/Home";
+import {Button} from 'antd';
+
 
 
 
 export default function App() {
   return (
     <Router>
+        <div>
+        <Button type="primary">Primary</Button>
+        </div>
+  
       <div>
         <nav>
           <ul>
