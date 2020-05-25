@@ -1,34 +1,27 @@
 //@ts-check
 import React from "react";
-import { BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
-import Peliculas from './components/Peliculas';
-import Administrar from './components/Administrar';
-
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from './components/Header';
+import Footer from "./components/Footer"
+import Peliculas from "./pages/Peliculas";
+import Administrar from "./pages/Administrar";
+import Navbar from "./components/Navbar";
 export default function App() {
   return (
     <Router>
-      <div>
-        <nav className="text-white bg-black flex justify-center items-center">
-          <ul className="flex p-4">
-            <li className="ml-2 text-xl">
-              <Link to="/">Peliculas</Link>
-            </li>
-            <li className="ml-2 text-xl">
-              <Link to="/admin">Administar Peliculas</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route path="/admin">
-            <Administrar />
-          </Route>
-          <Route path="/">
-            <Peliculas />
-          </Route>
-        </Switch>
-      </div>
+      <Header />
+      <Footer />
+      <Navbar/>
+      <main>
+      <Switch>
+        <Route path="/admin">
+          <Administrar />
+        </Route>
+        <Route path="/">
+          <Peliculas />
+        </Route>
+      </Switch>
+      </main>
     </Router>
   );
 }

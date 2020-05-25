@@ -1,0 +1,20 @@
+/*INICIO HEADER */
+.header{
+    width: 100%;
+    position: relative;
+    height: 230px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url(../img/header1.jpg);
+}
+
+.principal__titulo{
+    color:#9ACD32;
+    transform: (-50%,-50%);
+    font-weight: 900;
+    position: absolute;
+    top:25%;
+    left:40%;
+}
+
+/*FIN ESTILOS HEADER*/
