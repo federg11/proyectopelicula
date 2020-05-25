@@ -8,10 +8,7 @@ import Administrar from './components/Administrar';
 export default function App() {
   return (
     <Router>
-        <div>
-        <Button type="primary">Primary</Button>
-        </div>
-  
+          
       <div>
         <nav className="text-white bg-black flex justify-center items-center">
           <ul className="flex p-4">
@@ -23,7 +20,7 @@ export default function App() {
             </li>
           </ul>
         </nav>
-
+        
         <Switch>
           <Route path="/admin">
             <Administrar />
