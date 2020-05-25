@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
       cb(null, name);
     }
   });
-  const upload = multer({ storage: storage })
+  const upload = multer({storage})
 
   const ComentarioSchema = new Schema( {
         _id: ObjectId,
@@ -54,7 +54,7 @@ const PeliculaSchema = new Schema(
             res.status(505).json({mensaje:"error", tipo: error});
         }
     };
-
+        console.log();
     const crearPelicula = async (req,res) =>{
         console.log('req: ',req.file.filename);
         const urlImagen = 'http://localhost:3000/imagenes/' + req.file.filename;

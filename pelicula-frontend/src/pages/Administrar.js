@@ -9,15 +9,19 @@ export default function Administrar (){
     const [loading,setLoading] = useState(false);
    // const [comentarios,setComentarios] = useState("");
     
+
     const handleSubmit =  async (e) => {
         try {
             e.preventDefault();
             setLoading(true);
             const payLoad = {
+
                 titulo,
                 anio,
                 descripcion,
+                //imagen
             }
+            console.log('test', payLoad);
             const response = await axios.post("http://localhost:3000/peliculas/", payLoad);
             console.log(response.data);
         } catch (error) {
