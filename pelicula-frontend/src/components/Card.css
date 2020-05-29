@@ -1,0 +1,8 @@
+.card{
+    max-width: 540px;
+}
+
+.estilo__card{
+    background-color: grey;
+    padding-top: 20px;
+}

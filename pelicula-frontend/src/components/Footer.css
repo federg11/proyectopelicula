@@ -1,8 +1,7 @@
 .footer__cont{
-    background:#344;
-    height: 4rem;
-    position: fixed;
     left: 0;
-    bottom: 0;
+    bottom:0;
     width: 100%;
+    
 }
+

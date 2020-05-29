@@ -1,9 +1,25 @@
-.navbar{
-    background-color: rgb(53, 52, 52);
-    align-items: center;
+.nav__items{
+    color: white;
+    border-right: 1px solid #fafafa61;
+    display: block;
+    padding: .5rem 1rem;
+    }
+    
+    
+    .nav__items{
+        background:#950C2B;
+        color: seashell;
+        text-decoration: none;
+        transition-duration: .5s;
+    }
+/* Nav en escritorios inicio*/
+/* Nav en escritorios fin*/
+
+/* nav en movil inicio */
+.nav__cont_nav{
+    background-color: rgba(9, 56, 95, 0.911);
+    border-top: 1px solid #ffffff1f; 
+   
 }
 
-.nav-link{
-    color:white !important;
-
-}
+/* nav en movil fin */
