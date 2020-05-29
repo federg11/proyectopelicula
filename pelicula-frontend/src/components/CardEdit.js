@@ -46,7 +46,7 @@ export default function Card(props) {
                                     value={pelicula.titulo}/>
                                     <input type="text" name='anio' className="form-control"  
                                     onChange={handleChangeEditar}
-                                    value={pelicula.anio}/>
+                                    value={pelicula.anio}/> 
                                 </div>
                                 <div className="modal-body">
                                 </div>
