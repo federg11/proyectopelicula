@@ -1,11 +1,12 @@
 /*INICIO HEADER */
 .header{
-    width: 100%;
+    width: 100%x;
     position: relative;
-    height: 135px;
+    height: 150px;
     background-repeat: no-repeat;
     background-size: cover;
     background: url(../img/header1.jpg);
+    background-position: center center;
 }
 
 .principal__titulo{

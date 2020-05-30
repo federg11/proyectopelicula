@@ -6,3 +6,13 @@
     background-color: grey;
     padding-top: 20px;
 }
+.card-body{
+    background-color: darkcyan;
+}
+.card-title{
+    color:white;
+}
+
+.card_cont{
+    margin-top:10px
+}

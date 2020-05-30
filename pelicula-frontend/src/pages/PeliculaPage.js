@@ -38,11 +38,12 @@ export default function Peliculas() {
           <div className="col-md-4">
             <img src={pelicula.imagen} className="card-img" alt="..."/>
           </div>
-          <div className="col-md-8">
+          <div className="cont_card col-md-8">
             <div className="card-body">
-                <h5 className="card-title">{pelicula.titulo}</h5>
-              <p className="card-text">{pelicula.descripcion}</p>
-              <p className="card-text">{pelicula.duracion}</p>
+                <h5 className="card-title">Título: {pelicula.titulo}</h5>
+                <p className="card-text">Año: {pelicula.anio}</p>
+                <p className="card-text">Duración: {pelicula.duracion} Hs</p>
+              <p className="card-text">Descripción: {pelicula.descripcion}</p>
               <button type="button" className="btn btn-success" onClick={volver}>Volver</button>
             </div>
           </div>

@@ -40,9 +40,9 @@ export default function Peliculas() {
             ))
 
     return (
-        <div>
-            <div>
-                <input type="search" placeholder="Buscar Pelicula" onChange={handleChange}/>
+        <div className="container_principal">
+            <div className="d-flex justify-content-center">
+                <input className="estilo_buscar form-control col-3 mt-3 borde" type="search" placeholder="Buscar Pelicula" onChange={handleChange}/>
             </div>
             
             {/* <Busqueda/> */}
@@ -55,9 +55,8 @@ export default function Peliculas() {
                                 {pelicula}
                             </div>
                         </div>
-                )} 
+                )}
         </div>
-        
 
     );
 }

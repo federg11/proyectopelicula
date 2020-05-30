@@ -2,6 +2,22 @@
     left: 0;
     bottom:0;
     width: 100%;
-    
+    background-color: #273443;
+    align-items: center;
 }
 
+.fab{
+    margin-right: 5px;
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+}
+.estilo_contacto{
+    font-size: 25px;
+}
+.estilo_lista{
+    list-style:none;
+
+}
+.fas{
+    margin-right: 5px;
+}

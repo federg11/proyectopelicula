@@ -43,7 +43,7 @@ export default function Formulario() {
     const pelicula = ingreso.map((pelicula) => ( 
             <CardEdit key={pelicula._id} id={pelicula._id} pelicula={pelicula}/>
             ))
-    
+
     
     const handleSubmit = async (e) =>{
         try {
@@ -78,6 +78,7 @@ export default function Formulario() {
                     type="text" 
                     placeholder="Titulo de la pelicula"
                     value={titulo}
+                    required="true"
                     onChange={e => setTitulo(e.target.value)}>   
                     </input>
                 </div>
@@ -86,6 +87,7 @@ export default function Formulario() {
                     <input className="form-control" 
                     type="text" placeholder="Año de la pelicula"
                     value={anio}
+                    required="true"
                     onChange={e => setAnio(e.target.value)}></input>
                 </div>
                 <div className="form-group">
@@ -93,6 +95,7 @@ export default function Formulario() {
                     <input className="form-control" 
                     type="text" placeholder="Duracion HH:MM"
                     value={duracion}
+                    required="true"
                     onChange={e => setDuracion(e.target.value)}></input>
                 </div>
                 <div className="form-group">
@@ -100,35 +103,41 @@ export default function Formulario() {
                     <input className="form-control" type="text"
                      placeholder="Breve descripcion"
                      value={descripcion}
+                     required="true"
                      onChange={e => setDescripcion(e.target.value)}></input>
                 </div>
                 <div className="form-group">
+                   <div>
                     <label >Foto</label>
                     {
-                    imagen && <img src={imagenURL} style={{width:200}} alt=""/>
+                    imagen && <img src={imagenURL} style={{width:50, height:60}} alt=""/>
                     }
+                    </div>
                     
-                  <input type="file"
-                    onChange={handleImagen}>
-
+                  <input type="file" required="true"
+                    onChange={handleImagen}> 
                 </input> 
                 </div>
                 {
                     loading ? (
                         "Loading..."
                     ) : (
-                        <button type="submit" className="btn btn-primary">Crear pelicula</button>   
+                        <button type="submit" className="btn btn-dark">Crear pelicula</button>   
                     )} 
                     <p>{respuestaMensaje}</p>
                     {
                         respuestaMensaje  && (
                             <Link to="/">Volver</Link>
-                            )}  
+                            )} 
             </form>
-            <div className="justify-content-center">
-                <input  type="search" placeholder="Buscar Pelicula" onChange={handleChange}/>
+            <div className="d-flex justify-content-center">
+                <input className="form-control col-3 mt-3 inline-block"  type="search" placeholder="Buscar Pelicula" onChange={handleChange}/>
+                
+            </div>
+            <div className="estilo_titulo">
                 <h4 className="text-center">Peliculas Creadas</h4>
             </div>
+           
             <div className="container d-flex">
                 <div className="row my-3">
                     

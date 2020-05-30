@@ -1,4 +1,4 @@
-//@ts-check
+
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from './components/Header';
@@ -7,6 +7,7 @@ import Peliculas from "./pages/Peliculas";
 import Navbar from "./components/Navbar";
 import AddPelicula from "./pages/AddPelicula";
 import PeliculaPage from './pages/PeliculaPage';
+import EditMoviePage from './pages/EditMoviePage';
 export default function App() {
   return (
     <Router>
@@ -14,6 +15,7 @@ export default function App() {
       <Navbar/>
       <main>
       <Switch>
+      <Route path="/pelicula/editar/:id" exact component={EditMoviePage}/>
       <Route path="/pelicula/:id" exact component={PeliculaPage}>
         </Route>
         <Route path="/admin">
