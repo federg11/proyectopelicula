@@ -23,11 +23,11 @@ export default function Footer() {
                                     <strong className="estilo_contacto">Contacto</strong>
                                     <p>
                                         <i className="fab fa-whatsapp"></i>
-                                        <a href="https://web.whatsapp.com/">+5493816343931</a>
+                                        <a href="https://web.whatsapp.com/" target="blank">+5493816343931</a>
                                     </p> 
                                     <p>
                                         <i className="fas fa-envelope-square"></i>
-                                        <a href="www.gmail.com">tu-movies@tumovies.com.ar</a>
+                                        <a href="https://outlook.live.com/owa/" target="blank">tu-movies@tumovies.com.ar</a>
                                     </p> 
 
                             </div>
